@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jGravity Demo</title>
+
+<!-- jQuery *Reequired -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- jGravity file -->
+<script type="text/javascript" src="jGravity.js"></script>
+
+<!-- Unimportant CSS File for demo purposes -->
+<link href="http://tinybigideas.com/template/css/colourpadFramework-min.css" rel="stylesheet" />
+
+
+<script>
+$(document).ready(function() {
+//	$('div.jGravity').live('click', function() { // This can be changed to anything you like in order to trigger jGravity effect
+		$('body').jGravity({ // jGravity works best when targeting the body
+			target: 'everything', // Enter your target critera e.g. 'div, p, span', 'h2' or 'div#specificDiv', or even 'everything' to target everything in the body
+			ignoreClass: 'ignoreMe', // Specify if you would like to use an ignore class, and then specify the class
+			weight: 25, // Enter any number 1-100 ideally (25 is default), you can also use 'heavy' or 'light'
+			depth: 5, // Enter a value between 1-10 ideally (1 is default), this is used to prevent targeting structural divs or other items which may break layout in jGravity
+			drag: true // Decide if users can drag elements which have been effected by jGravity
+		});
+
+		// Misc code for demo purposes
+//		$(this).removeClass('jGravity');
+		$(this).delay(1000).queue(function() {
+//			$(this).html("<h2><a href='http://tinybigideas.com/plugins/jquery-gravity/'>Get jGravity</a></h2>");
+		});
+		// ----- \\
+		
+//	});
+});
+</script>
+
+<style>
+/* Misc styles used for demo purposes */
+body {overflow:hidden; margin:0; padding:0; height:100%;}
+
+div.box {height:100px; width:100px; float:left; margin:10px; color:white; text-align:center;}
+
+div.duckCentre {width:100%; clear:both; height: 500px; margin:20px 0;}
+	div.duckCentre div.duckInner {width:1500px; margin:0 auto;}
+		div.duckCentre div.duck {background:#FFF; float:left; width:100px; height:100px; margin:20px; padding:0px; border:0px solid #eee;}
+</style>
+
+</head>
+
+<body>
+
+<!-- All HTML elements are used for demo purposes - jGravity should work correctly on most layouts. If you do find a problem item/s, play with the depth and ignoring certain items until you get it right -->
+
+<div class="blackHeader ignoreMe">
+</div>
+
+<div class="logoBar ignoreMe">
+</div>
+
+<div class="goBtnCentre ignoreMe">
+<!--    <div class="goButton jGravity">
+        <h2 class="ignoreMe">Initiate jGravity</h2>
+    </div> -->
+</div>
+
+<div class="duckCentre ignoreMe">
+	<div class="duckInner ignoreMe">
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_amazon.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_armani.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_amazon.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_armani.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_burberry.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_ebay.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_klein.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_kors.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_lacoste.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_border_montblanc.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_burberry.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_clein.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_ebay.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_kors.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_lacoste.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/box_texture_montblanc.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_amazon.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_armani.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_burberry.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_ebay.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_kelvin klein.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_kors.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_lacoste.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/gift_texture_montblanc.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_amazon.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_armani.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_Burberry.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_CK.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_ebay.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_kors.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_lacoste.jpg" /></div>
+        <div class="duck"><img class="ignoreMe" src="img/website bg textured_montblanc.jpg" /></div>
+   </div>
+</div>
+
+
+</body>
+</html>
